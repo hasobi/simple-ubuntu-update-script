@@ -21,13 +21,6 @@ check_exit_status() {
 	fi
 }
 
-greeting() {
-
-	echo
-	echo "Hello, $USER. Let's update this system."
-	echo
-}
-
 update() {
 
     sudo apt-get update;
@@ -35,16 +28,6 @@ update() {
 
 }
 
-leave() {
 
-	echo
-	echo "--------------------"
-	echo "- Update Complete! -"
-	echo "--------------------"
-	echo
-	exit
-}
 
-# greeting
 update
-leave

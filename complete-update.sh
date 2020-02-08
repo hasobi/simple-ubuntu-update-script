@@ -30,22 +30,25 @@ greeting() {
 
 update() {
 
-        sudo apt-get update;
+    sudo apt-get update;
 	check_exit_status
 
-        sudo apt-get upgrade -y;
+    sudo apt-get upgrade -y;
 	check_exit_status
 
-        sudo apt-get dist-upgrade -y;
+    sudo apt-get dist-upgrade -y;
 	check_exit_status
 }
 
 housekeeping() {
 
-	sudo apt-get autoremove -y;
+	sudo apt autoremove -y;
 	check_exit_status
 
-	sudo apt-get autoclean -y;
+	sudo apt autoclean -y;
+	check_exit_status
+
+	sudo apt clean -y;
 	check_exit_status
 
 	sudo updatedb;
@@ -62,7 +65,7 @@ leave() {
 	exit
 }
 
-greeting
+# greeting
 update
 housekeeping
-leave
+# leave
